@@ -31,7 +31,7 @@ function App() {
               <div>
                 <h1 className="text-2xl font-bold">Gerenciador de tarefas</h1>
                 <p className="text-gray-700">
-                  Organize sua vida com eficiência
+                  Organize sua vida com eficiência.
                 </p>
               </div>
             </div>
