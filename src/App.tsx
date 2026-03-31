@@ -14,6 +14,7 @@ import {
   List,
   Calendar,
   CircleAlert,
+  Circle,
 } from "lucide-react";
 function App() {
   const [ativo, setAtivo] = useState("Total");
@@ -174,7 +175,67 @@ function App() {
           <AddTarefa
             isOpen={showWindowAdd}
             onClosed={() => setShowWindowAdd(false)}
-          ></AddTarefa>
+            title="Nova Tarefa"
+          >
+            <div className="py-3 font-semibold">
+              <h2 className="flex items-center justify-start px-3 text-gray-600">
+                Título
+              </h2>
+              <input
+                type="text"
+                className="text-gray-900 font-normal flex items-center justify-start mx-4 p-1.5 outline outline-gray-300 w-108 rounded-md"
+                placeholder="Digite o título da tarefa..."
+              />
+            </div>
+            <div className="py-3 font-semibold">
+              <h2 className="flex items-center justify-start px-3 text-gray-600">
+                Descrição
+              </h2>
+              <textarea
+                name=""
+                id=""
+                className="flex items-center px-2 placeholder:text-gray-500 font-normal justify-start w-108 h-15 mx-4 outline outline-gray-300 rounded-md resize-none"
+                placeholder="Adicione detalhes a tarefa..."
+              ></textarea>
+            </div>
+            <div className="flex py-3 font-semibold">
+              <div>
+                <h2 className="flex items-center text-gray-600 justify-start px-3">
+                  Categoria
+                </h2>
+                <button
+                  type="button"
+                  className="text-gray-950 p-1.5 flex items-center justify-start mx-4 gap-1 outline outline-gray-300 w-50 rounded-md"
+                >
+                  <Circle className="size-4 text-blue-500 rounded-full bg-blue-500 m-0.5" />
+                  Trabalho
+                </button>
+              </div>
+
+              <div>
+                <h2 className="flex items-center text-gray-600 justify-start px-3">
+                  Prioridade
+                </h2>
+                <button
+                  type="button"
+                  className="text-gray-950 p-1.5 flex items-center justify-start mx-4 gap-1 outline outline-gray-300 w-50 rounded-md"
+                >
+                  <Circle className="size-4 text-amber-500 rounded-full bg-amber-500 m-0.5" />
+                  Média
+                </button>
+              </div>
+            </div>
+
+            <div className="py-3">
+              <h2 className="flex items-center justify-start px-3">
+                Data de vencimento
+              </h2>
+              <input
+                type="date"
+                className="flex items-center [&::-webkit-calendar-picker-indicator]:hidden justify-start mx-4 p-1.5 outline outline-gray-300 w-108 rounded-md text-gray-500"
+              />
+            </div>
+          </AddTarefa>
 
           <div className="bg-white mt-10 min-h-70 max-h-max rounded-md drop-shadow-md outline outline-gray-200 p-5 text-sm space-y-4"></div>
         </main>
